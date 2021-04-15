@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-
+const conDB = 'mongodb+srv://userNodeCafe:sebaghost11@cluster0.cugwa.mongodb.net/ikedaharketweb'
 const dbConnection = async() =>{
     try{
-        await mongoose.connect(process.env.MONGODB_CON, {
+        await mongoose.connect(conDB, {
             useNewUrlParser: true,
             useUnifiedTopology:true,
             useCreateIndex:true,
