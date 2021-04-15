@@ -12,6 +12,7 @@ class Server{
             auth:       '/api/auth',
             habilidades:'/api/habilidades',
             imagenes:   '/api/imagenes',
+            contacto:   '/api/contacto',
         }
         this.conectarDB();
         this.middlewares();
@@ -29,6 +30,7 @@ class Server{
         this.app.use(this.paths.auth,       require('../routes/auth'));
         this.app.use(this.paths.habilidades,require('../routes/habilidades'));
         this.app.use(this.paths.imagenes,   require('../routes/imagenes'));
+        this.app.use(this.paths.contacto,   require('../routes/contacto'));
     }
     listen(){
         this.app.listen(this.port,()=>{
