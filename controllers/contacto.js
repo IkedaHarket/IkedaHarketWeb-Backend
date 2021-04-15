@@ -4,13 +4,13 @@ const { transporter } = require("../helpers/sendCorreo")
 
 const enviarCorreo = async(req,res)=>{
     try {
-        const {asunto,mensaje} = req.body
+        const {correo,mensaje} = req.body
         // send mail with defined transport object
         await transporter.sendMail({
             from: 'Ikeda Web Contacto - Ikeda Bot', // sender address
             to: "sebaaignacio111@gmail.com", // list of receivers
             subject: "Contacto IkedaHarket.com", // Subject line
-            html: `<h1>🍚 ${asunto} 🍚</h1>
+            html: `<h1>🍚 ${correo} 🍚</h1>
                     <hr />
                     <p>${mensaje} 🍙🍙🍙</p>
                     <br /><br />

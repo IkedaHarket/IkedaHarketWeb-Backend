@@ -8,7 +8,8 @@ const router = new Router();
 
 
 router.post('/',[
-    check('asunto','El asunto es obligatorio').not().isEmpty(),
+    check('correo','El correo es obligatorio').not().isEmpty(),
+    check('correo','El correo es obligatorio').isEmail(),
     check('mensaje','El mensaje es obligatorio').not().isEmpty(),
     validarCampos
 ],enviarCorreo)
