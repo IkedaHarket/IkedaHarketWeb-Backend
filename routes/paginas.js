@@ -18,7 +18,6 @@ router.post('/',[
     check('enlace','El link de la pagina no es valido').isURL(),
     check('imagen','La imagen es obligatoria').not().isEmpty(),
     check('imagen','El link de la imagen no es valido').isURL(),
-    check('descripcion','El titulo debe tener maximo 300 caracteres').isLength({max:300}),
     validarCampos
 ],crearPagina);
 
@@ -30,7 +29,6 @@ router.put('/:id',[
     check('enlace','El link de la pagina no es valido').isURL(),
     check('nombre','El nombre de la pagina es obligatorio').not().isEmpty(),
     check('imagen','El link de la imagen no es valido').isURL(),
-    check('descripcion','El titulo debe tener maximo 300 caracteres').isLength({max:300}),
     validarCampos
 ],actualizarPagina);
 
