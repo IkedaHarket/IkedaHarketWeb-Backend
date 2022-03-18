@@ -1,0 +1,7 @@
+const env ={
+    port: ,
+    mongodb_con: '',
+    secretorprivatekey:'',
+    claveGmail:'',
+}
+module.exports = env
