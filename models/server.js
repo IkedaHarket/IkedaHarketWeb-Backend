@@ -31,7 +31,7 @@ class Server{
         this.app.use(this.paths.auth,       require('../routes/auth'));
         this.app.use(this.paths.habilidades,require('../routes/habilidades'));
         this.app.use(this.paths.imagenes,   require('../routes/imagenes'));
-        this.app.use(this.paths.contacto,   require('../routes/contacto'));
+        //this.app.use(this.paths.contacto,   require('../routes/contacto'));
         this.app.use(this.paths.paginas,    require('../routes/paginas'));
     }
     listen(){
