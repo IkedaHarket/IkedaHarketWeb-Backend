@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const { check } = require('express-validator');
-const { obtenerImagen,crearImagen,actualizarImagen,borrarImagen } = require('../controllers/imagen');
+const { obtenerImagenes,crearImagen,actualizarImagen,borrarImagen } = require('../controllers/imagen');
 const { verificarImagenId } = require('../helpers/verifyImagen');
 const { validarCampos } = require('../middlewares/validarCampos');
 const { validarJWT } = require('../middlewares/validarJWT');
@@ -8,7 +8,7 @@ const { validarJWT } = require('../middlewares/validarJWT');
 const router = new Router();
 
 
-router.get('/',obtenerImagen);
+router.get('/',obtenerImagenes);
 
 router.post('/',[
     validarJWT,

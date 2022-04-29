@@ -1,6 +1,6 @@
 const Imagen = require("../models/imagen");
 
-const obtenerImagen = async(req,res)=>{
+const obtenerImagenes = async(req,res)=>{
     try {
         const imagenes = await Imagen.find();
         return res.status(200).json(imagenes)
@@ -49,7 +49,7 @@ const borrarImagen = async(req,res)=>{
 }
 
 module.exports = {
-    obtenerImagen,
+    obtenerImagenes,
     crearImagen,
     actualizarImagen,
     borrarImagen,
