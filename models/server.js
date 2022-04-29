@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-// const env = require('../config/env')
+const env = require('../config/env')
 const { dbConnection } = require('../database/config');
 
 class Server{
     
     constructor(){
         this.app = express();
-        this.port = process.env.PORT;
+        this.port = env.port;
         this.paths = {
             auth:       '/api/auth',
             habilidades:'/api/habilidades',
