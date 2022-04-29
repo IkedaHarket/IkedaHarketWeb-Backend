@@ -7,7 +7,7 @@ class Server{
     
     constructor(){
         this.app = express();
-        this.port = env.port;
+        this.port = process.env.PORT;
         this.paths = {
             auth:       '/api/auth',
             habilidades:'/api/habilidades',
